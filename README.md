@@ -42,6 +42,19 @@ IMJS_IMODEL_ID = ""
 
 - If at any time you wish to change the iModel that you are viewing, you can change the values of the iTwinId or iModelId query parameters in the url (i.e. localhost:3000?iTwinId=myNewITwinId&iModelId=myNewIModelId)
 
+Lastly, to view the map/terrain you'll need to generate the following API keys:
+
+```
+# Api key for Bing Maps service. For more information https://www.microsoft.com/en-us/maps/create-a-bing-maps-key
+IMJS_BING_MAPS_KEY = ""
+
+# Access token for Map Box service. For more information: https://docs.mapbox.com/help/getting-started/access-tokens
+IMJS_MAP_BOX_KEY = ""
+
+# Access token for Cesium service. For more information: https://cesium.com/learn/ion/cesium-ion-access-tokens
+IMJS_CESIUM_ION_KEY = ""
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
