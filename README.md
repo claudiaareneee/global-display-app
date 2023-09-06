@@ -55,9 +55,9 @@ IMJS_MAP_BOX_KEY = ""
 IMJS_CESIUM_ION_KEY = ""
 ```
 Links from above:
-- [https://www.microsoft.com/en-us/maps/create-a-bing-maps-key](Bing Maps API)
-- [https://docs.mapbox.com/help/getting-started/access-tokens](Mapbox API)
-- [https://cesium.com/learn/ion/cesium-ion-access-tokens](Cesium Ion API)
+- [Bing Maps API](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key)
+- [Mapbox API](https://docs.mapbox.com/help/getting-started/access-tokens)
+- [Cesium Ion API](https://cesium.com/learn/ion/cesium-ion-access-tokens)
 
 ## Available Scripts
 
