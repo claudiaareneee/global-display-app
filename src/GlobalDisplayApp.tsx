@@ -3,7 +3,7 @@
 * See LICENSE.md in the project root for license terms and full copyright notice.
 *--------------------------------------------------------------------------------------------*/
 import React, { useEffect } from "react";
-import { UiFramework } from "@itwin/appui-react";
+import { UiFramework, UiItemsProvider } from "@itwin/appui-react";
 import { IModelApp, ScreenViewport } from "@itwin/core-frontend";
 import { Viewer, ViewerNavigationToolsProvider, ViewerViewportControlOptions } from "@itwin/web-viewer-react";
 import { GlobalDisplayApi } from "./GlobalDisplayApi";
@@ -11,7 +11,7 @@ import { GlobalDisplayWidgetProvider } from "./GlobalDisplayWidget";
 import { authClient } from "./common/AuthorizationClient";
 import { mapLayerOptions, tileAdminOptions } from "./common/MapLayerOptions";
 
-const uiProviders = [
+const uiProviders: UiItemsProvider[] = [
   new GlobalDisplayWidgetProvider(),
   new ViewerNavigationToolsProvider(),
 ];
@@ -48,7 +48,8 @@ const GlobalDisplayApp = () => {
         hideStatusBar: true,
         hideToolSettings: true,
       }
-    } uiProviders={uiProviders}
+    }
+    uiProviders={uiProviders}
     enablePerformanceMonitors={false}
     mapLayerOptions={mapLayerOptions}
     tileAdmin={tileAdminOptions}

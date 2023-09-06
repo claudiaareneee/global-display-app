@@ -5,6 +5,7 @@
 import React, { useEffect, useState } from "react";
 import { SpecialKey } from "@itwin/appui-abstract";
 import {
+  CommonWidgetProps,
   StagePanelLocation,
   StagePanelSection,
   UiItemsProvider,
@@ -124,15 +125,15 @@ const GlobalDisplayWidget = () => {
 export class GlobalDisplayWidgetProvider implements UiItemsProvider {
   public readonly id: string = "GlobalDisplayWidgetProvider";
 
-  public provideWidgets(_stageId: string, _stageUsage: string, location: StagePanelLocation, _section?: StagePanelSection): ReadonlyArray<Widget> {
-    const widgets: Widget[] = [];
+  public provideWidgets(_stageId: string, _stageUsage: string, location: StagePanelLocation, _section?: StagePanelSection): ReadonlyArray<CommonWidgetProps> {
+    const widgets: CommonWidgetProps[] = [];
     if (location === StagePanelLocation.Bottom) {
       widgets.push(
         {
           id: "GlobalDisplayWidget",
           label: "Global Display Controls",
           defaultState: WidgetState.Open,
-          content: <GlobalDisplayWidget />,
+          getWidgetContent: () => <GlobalDisplayWidget />,
         }
       );
     }
